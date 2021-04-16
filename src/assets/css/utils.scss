@@ -1,0 +1,36 @@
+// ******************** BEGIN FONTS *********************** 
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/Spartan-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/Spartan-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/Spartan-Bold.ttf');
+    font-weight: 700;
+}
+$FONT-SIZE: 15px;
+// ******************** END FONTS *********************** 
+
+// ******************** BEGIN COLORS VARIABLES *********************** 
+$primary-magenta:  hsl(300, 43%, 22%);
+$primary-pink: hsl(333, 80%, 67%);
+$dark-magenta: hsl(303, 10%, 53%);
+$light-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+// ******************** END COLORS VARIABLES *********************** 
+
+// ******************** BEGIN SCSS FUNCTIONS *********************** 
+@mixin flexContent ($align, $justify, $direction){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+// ******************** END SCSS FUNCTIONS *********************** 
