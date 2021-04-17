@@ -1,0 +1,44 @@
+@import './variables';
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/Spartan-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/Spartan-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/Spartan-Bold.ttf');
+    font-weight: 700;
+}
+
+.social-proof-article{
+    h2{
+        color: $primary-magenta;
+    }
+    p{
+        color: $dark-magenta;
+    }
+}
+.ratings-wrapper{
+    color: $primary-magenta;
+    font-weight: 700;
+}
+
+.review-wrapper{
+    .username{
+        color: $white;
+        font-weight: 700;
+    }
+    .verified{
+        color: $primary-pink;
+    }
+    .review{
+        color: $white;
+    }
+}
+

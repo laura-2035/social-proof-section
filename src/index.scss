@@ -1,31 +1,12 @@
-@import './assets/css/utils.scss';
-@import './components/Card';
+@import './assets/scss/animations';
+@import './assets/scss/global';
+@import './assets/scss/media';
+@import './assets/scss/mixins';
+@import './assets/scss/typhography';
+@import './assets/scss/variables';
+@import './components/Card.scss';
+@import './components/Review.scss';
 
-*{
-  margin: 0;
-  padding: 0;
-}
 
-body{
-  font-family: 'Spartan', monospace;
-  font-size: $FONT-SIZE;
-  font-family: 400;
-  height: 100vh;
-}
 
-  
 
-@media (min-width: 480px ) {
-  body {
-    background: green;
-  }
-  .ratings{
-    background-color: red;
-  }
- 
-}
-@media (min-width: 768px){
-  body{
-    background-color: aquamarine;
-  }
-}

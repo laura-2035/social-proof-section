@@ -1,0 +1,13 @@
+@import '../scss/variables';
+
+*{
+    margin: 0;
+    padding: 0;
+}  
+body{
+    font-family: 'Spartan', monospace;
+    font-size: $FONT-SIZE;
+    font-family: 400;
+    height: 100vh;
+    box-sizing: border-box;
+}

@@ -1,3 +1,29 @@
-.ratings{
-    background-color: yellow;
+@import '../assets/scss/mixins';
+@import '../assets/scss/variables';
+
+.social-proof-section{
+    
+
+    .social-proof-article{
+        @include flexContent(center,center, column);
+        text-align: center;
+    }
+    .ratings-wrapper{
+        
+        .ratings{
+           
+           background-color: $light-magenta;
+           border-radius: 10px;
+
+           .rating {
+               
+                margin-bottom: .5em;
+                img{
+                    padding: 0 0.3em 0 0.3em;
+                }
+           }
+           
+           
+        }
+    }
 }

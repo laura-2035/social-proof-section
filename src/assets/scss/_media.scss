@@ -1,0 +1,116 @@
+//Small devices
+@import './mixins';
+@import './variables';
+
+@media (max-width: 900px)  {
+    body {
+    //   background: green;
+    }
+    .social-proof-section{
+        @include flexContent(center, center, column);
+        background-image: url(../img/bg-pattern-top-mobile.svg), url(../img/bg-pattern-bottom-mobile.svg);
+        background-size: auto auto;
+        & > *{
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+        }
+        .social-proof-article{
+            margin-top: 5em;
+            margin-bottom: 2em;
+
+            h2{
+                text-align: center;
+                font-size: 2em;
+                width: 80%;
+                margin-bottom: .7em;
+            }
+            p{
+                font-size: .9em;
+                line-height: 1.5em;
+            }
+        }
+        
+        .review-wrapper{
+
+            .reviews{
+                width: $content-width-mobile;
+            }
+        }
+        .ratings-wrapper{
+
+            .ratings{
+                @include flexContent(center, center, column);
+                width: $content-width-mobile;
+                margin-bottom: 1.5em;
+                height: 80px;
+                font-size: .85em;
+            }
+        }
+    }
+  }
+  @media (min-width: 900px){
+   .social-proof-section{
+       display: unset;
+       display: grid;
+        @include gridContent('grid-template-rows', '25% 25% 50%');
+        @include gridContent('grid-template-columns', '100%');
+        & > * {
+            margin: 5em 1.5em auto 1.5em;
+        }
+        .social-proof-article{
+            
+            h2, p{
+                width: 50%;
+            }
+            h2{
+                font-size: 3em;
+            }
+            p{
+                font-size: 1.2em;
+            }
+        }
+        .ratings-wrapper{
+            @include flexContent(center, center, column);
+            .ratings{
+                width: 500px;
+                height: 60px;
+                margin: .5em auto;
+                @include flexContent(center, flex-start, row);
+                
+                .rating, p{
+                    margin-left: 2em;
+                    
+                } 
+                &:nth-child(1){
+                    margin-left: 25%;
+                }
+                &:nth-child(2){
+                    margin-left: 30%;
+                }
+                &:nth-child(3){
+                    margin-left: 35%;
+                } 
+            }
+             
+            
+        }
+        .review-wrapper{
+            @include flexContent(center, center, row);
+            flex-wrap: 1;
+            .reviews{
+                width: $content-width-tablet;
+                font-size: 0.9em;
+                margin: auto 1em;
+            }
+        }
+   }
+    
+  }
+  @media (min-width: 1200px){
+    .ratings-wrapper{
+        .ratings{
+            background-color: ivory;
+            color:red;
+        }
+    }
+  }
