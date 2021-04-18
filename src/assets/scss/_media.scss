@@ -40,25 +40,28 @@
                 line-height: 1.5em;
             }
         }
-
-        .review-wrapper {
-            .reviews {
-                width: $content-width-mobile;
-            }
-        }
         .ratings-wrapper {
+            width: 100%;
+            @include flexContent(center, center, column);
             .ratings {
                 @include flexContent(center, center, column);
                 width: $content-width-mobile;
                 margin-bottom: 1.5em;
                 height: 80px;
                 font-size: 0.85em;
-
                 .rating {
                     margin-bottom: 0.5em;
                 }
             }
         }
+        .review-wrapper {
+            width: 100%;
+            @include flexContent(center, center, column);
+            .reviews {
+                width: $content-width-mobile;
+            }
+        }
+        
     }
 }
 @media (min-width: 900px) {
