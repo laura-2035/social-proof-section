@@ -61,7 +61,6 @@
                 width: $content-width-mobile;
             }
         }
-        
     }
 }
 @media (min-width: 900px) {
@@ -147,8 +146,6 @@
             h2,
             p {
                 width: 80%;
-                
-                
             }
             h2 {
                 font-size: 3em;
@@ -196,7 +193,7 @@
                     margin-left: 0;
                     margin-right: 0;
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     margin-top: 40px;
                 }
                 &:nth-child(3) {
@@ -207,17 +204,16 @@
             }
         }
     }
-    
 }
 @media (min-width: 1600px) {
-    .social-proof-article{
-        h2,p{
+    .social-proof-article {
+        h2,
+        p {
             max-width: 25vw;
         }
     }
-    .review-wrapper{
-        
-        .reviews{
+    .review-wrapper {
+        .reviews {
             padding: 1vh 2vw;
         }
     }
