@@ -1,28 +1,28 @@
-@import '../assets/scss/variables.scss';
+@import "../assets/scss/variables.scss";
 
-
-.reviews{
+.reviews {
     border-radius: 1em;
     background-color: $primary-magenta;
     font-size: 0.85em;
     margin-bottom: 2em;
-    .user-info-wrapper{
+    .user-info-wrapper {
         @include flexContent(center, flex-start, row);
         flex-wrap: wrap;
-        margin: auto 1.5em;
-        img{
+        margin-left: 1em;
+        padding: 2.5em 0;
+        img {
             height: 40px;
             border-radius: 100px;
             margin-left: 1em;
         }
-        .user-info{
-            margin: 3em 1.5em 2em 1.5em;
-            p{
+        .user-info {
+            margin-left: 1em;
+            p {
                 line-height: 1.5em;
             }
         }
     }
-    .review{
+    .review {
         margin-left: 1.8em;
         margin-right: 1.8em;
         line-height: 1.5em;

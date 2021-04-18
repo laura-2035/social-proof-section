@@ -18,7 +18,6 @@
             background-repeat: no-repeat;
             background-position: top, bottom;
         }
-
         & > * {
             margin-left: 1.5em;
             margin-right: 1.5em;
@@ -27,7 +26,7 @@
             @include flexContent(center, center, column);
             text-align: center;
             margin-top: 5em;
-            margin-bottom: 2em;
+            margin-bottom: 3em;
 
             h2 {
                 text-align: center;
@@ -42,6 +41,7 @@
         }
         .ratings-wrapper {
             width: 100%;
+            margin-bottom: 3em;
             @include flexContent(center, center, column);
             .ratings {
                 @include flexContent(center, center, column);
