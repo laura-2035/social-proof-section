@@ -1,116 +1,221 @@
 //Small devices
-@import './mixins';
-@import './variables';
+@import "./mixins";
+@import "./variables";
 
-@media (max-width: 900px)  {
+@media (max-width: 900px) {
     body {
-    //   background: green;
+        background-image: url(../img/bg-pattern-top-desktop.svg), url(../img/bg-pattern-bottom-desktop.svg);
+        background-size: cover cover;
+        background-repeat: no-repeat;
+        background-position: top, bottom;
     }
-    .social-proof-section{
+    .social-proof-section {
         @include flexContent(center, center, column);
-        background-image: url(../img/bg-pattern-top-mobile.svg), url(../img/bg-pattern-bottom-mobile.svg);
-        background-size: auto auto;
-        & > *{
+        //I don't know if this is the correct way to change use @media
+        @media screen and (max-width: 375px) {
+            background-image: url(../img/bg-pattern-top-mobile.svg), url(../img/bg-pattern-bottom-mobile.svg);
+            background-size: cover cover;
+            background-repeat: no-repeat;
+            background-position: top, bottom;
+        }
+
+        & > * {
             margin-left: 1.5em;
             margin-right: 1.5em;
         }
-        .social-proof-article{
+        .social-proof-article {
+            @include flexContent(center, center, column);
+            text-align: center;
             margin-top: 5em;
             margin-bottom: 2em;
 
-            h2{
+            h2 {
                 text-align: center;
                 font-size: 2em;
                 width: 80%;
-                margin-bottom: .7em;
+                margin-bottom: 0.7em;
             }
-            p{
-                font-size: .9em;
+            p {
+                font-size: 0.9em;
                 line-height: 1.5em;
             }
         }
-        
-        .review-wrapper{
 
-            .reviews{
+        .review-wrapper {
+            .reviews {
                 width: $content-width-mobile;
             }
         }
-        .ratings-wrapper{
-
-            .ratings{
+        .ratings-wrapper {
+            .ratings {
                 @include flexContent(center, center, column);
                 width: $content-width-mobile;
                 margin-bottom: 1.5em;
                 height: 80px;
-                font-size: .85em;
+                font-size: 0.85em;
+
+                .rating {
+                    margin-bottom: 0.5em;
+                }
             }
         }
     }
-  }
-  @media (min-width: 900px){
-   .social-proof-section{
-       display: unset;
-       display: grid;
-        @include gridContent('grid-template-rows', '25% 25% 50%');
-        @include gridContent('grid-template-columns', '100%');
+}
+@media (min-width: 900px) {
+    body {
+        background-image: url(../img/bg-pattern-top-desktop.svg), url(../img/bg-pattern-bottom-desktop.svg);
+        background-size: cover cover;
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+    }
+    .social-proof-section {
+        height: 100%;
+
         & > * {
             margin: 5em 1.5em auto 1.5em;
         }
-        .social-proof-article{
-            
-            h2, p{
+        .social-proof-article {
+            @include flexContent(center, center, column);
+            text-align: center;
+            h2,
+            p {
                 width: 50%;
             }
-            h2{
+            h2 {
                 font-size: 3em;
+                margin-bottom: 10px;
             }
-            p{
+            p {
                 font-size: 1.2em;
             }
         }
-        .ratings-wrapper{
+        .ratings-wrapper {
             @include flexContent(center, center, column);
-            .ratings{
+
+            .ratings {
                 width: 500px;
                 height: 60px;
-                margin: .5em auto;
+                position: relative;
+                margin: 0.5em auto;
+
                 @include flexContent(center, flex-start, row);
-                
-                .rating, p{
+
+                .rating,
+                p {
                     margin-left: 2em;
-                    
-                } 
-                &:nth-child(1){
+                }
+                &:nth-child(1) {
                     margin-left: 25%;
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     margin-left: 30%;
                 }
-                &:nth-child(3){
+                &:nth-child(3) {
                     margin-left: 35%;
-                } 
+                }
             }
-             
-            
         }
-        .review-wrapper{
+        .review-wrapper {
             @include flexContent(center, center, row);
-            flex-wrap: 1;
-            .reviews{
+            flex-wrap: wrap;
+            .reviews {
                 width: $content-width-tablet;
                 font-size: 0.9em;
-                margin: auto 1em;
+                margin: 1em 1em;
             }
         }
-   }
-    
-  }
-  @media (min-width: 1200px){
-    .ratings-wrapper{
-        .ratings{
-            background-color: ivory;
-            color:red;
+    }
+}
+@media (min-width: 1200px) {
+    .social-proof-section {
+        height: 100%;
+        display: grid;
+        @include gridContent("grid-template-rows", "0.5fr 4.5fr 4.5fr 0.5fr");
+        @include gridContent("grid-template-columns", "10% 40% 40% 10%");
+        & > * {
+            margin: 5em 0 auto 0;
+        }
+        .social-proof-article {
+            text-align: left;
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            align-items: flex-start;
+
+            h2,
+            p {
+                width: 80%;
+                
+                
+            }
+            h2 {
+                font-size: 3em;
+                line-height: 1em;
+            }
+            p {
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+        }
+        .ratings-wrapper {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+
+            .ratings {
+                .rating {
+                    margin-bottom: 0px;
+                }
+                &:nth-child(1) {
+                    margin-left: 0%;
+                }
+                &:nth-child(2) {
+                    margin-left: 7%;
+                }
+                &:nth-child(3) {
+                    margin-left: 14%;
+                }
+            }
+        }
+        .review-wrapper {
+            grid-column: 2 / 4;
+            grid-row: 3 / 4;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            margin-top: 0;
+            .reviews {
+                margin-left: 2.3em;
+                margin-right: 2.3em;
+                width: $content-width-desktop;
+                .review {
+                    margin-left: 2.3em;
+                    margin-right: 2.3em;
+                }
+                &:nth-child(1) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                &:nth-child(2){
+                    margin-top: 40px;
+                }
+                &:nth-child(3) {
+                    margin-top: 80px;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+            }
         }
     }
-  }
+    
+}
+@media (min-width: 1600px) {
+    .social-proof-article{
+        h2,p{
+            max-width: 25vw;
+        }
+    }
+    .review-wrapper{
+        
+        .reviews{
+            padding: 1vh 2vw;
+        }
+    }
+}

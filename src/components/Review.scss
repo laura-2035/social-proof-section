@@ -6,8 +6,6 @@
     background-color: $primary-magenta;
     font-size: 0.85em;
     margin-bottom: 2em;
-    width: 300px;
-    height: 240px;
     .user-info-wrapper{
         @include flexContent(center, flex-start, row);
         flex-wrap: wrap;
